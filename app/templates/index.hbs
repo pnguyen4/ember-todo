@@ -1,3 +1,16 @@
 {{page-title "Index"}}
-<h1>Task Manager</h1>
-{{outlet}}
+
+<div class="container">
+  <h1>Task Manager</h1>
+  {{#each this.todo.todoList as |todo|}}
+    <div class="card">
+      <div class="card-title">
+          <b>{{todo.title}}</b> ({{todo.status}})
+      </div>
+      <p>{{todo.description}}</p>
+    </div>
+  {{/each}}
+
+  <br>
+  <LinkTo @route="form">Add Todo</LinkTo> 
+</div>

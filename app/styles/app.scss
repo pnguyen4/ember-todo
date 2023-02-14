@@ -1,3 +1,24 @@
 body {
-    background-color: #eee;
+    background-color: #f7f7f7;
+}
+
+.container {
+    margin: 1rem;
+}
+
+form {
+    width: 30%;
+}
+
+input {
+    display: block;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25em;
+    padding: 1rem;
+
 }
