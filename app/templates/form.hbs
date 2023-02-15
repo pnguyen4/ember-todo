@@ -1,14 +1,16 @@
 {{page-title "Form"}}
 
 <div class="flex-container m-5">
-  <form class="card m-auto p-5">
-      <h3 class="text-center ml-3"> Add Todo </h3>
-      <label for="title">Title</label>
-      <Input @type="text" @value={{this.title}} id="title"/>
-      <label for="description">Description</label>
-      <Input @type="text" @value={{this.description}} id="description"/>
-      <button type="button" class="btn btn-primary" {{on "click" this.addTodo}}>Add Todo</button>
-      <br>
-      <LinkTo @route="index">See Todos</LinkTo>
-  </form>
+  <div class="row">
+    <form class="card m-auto p-5 col-lg-4">
+        <h3 class="text-center ml-3"> Add Todo </h3>
+        <label for="title">Title</label>
+        <Input @type="text" @value={{this.title}} id="title"/>
+        <label for="description">Description</label>
+        <Input @type="text" @value={{this.description}} id="description"/>
+        <button type="button" class="btn btn-primary" {{on "click" this.addTodo}}>Add Todo</button>
+        <br>
+        <LinkTo @route="index">See Todos</LinkTo>
+    </form>
+  </div>
 </div>
