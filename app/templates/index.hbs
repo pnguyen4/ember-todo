@@ -1,18 +1,24 @@
 {{page-title "Index"}}
 
-<div class="container">
-  <h1>Task Manager</h1>
-  {{#each this.model as |todo|}}
-    <div class="card">
-      <div class="card-title">
-          <b>{{todo.title}}</b> ({{todo.status}})
+<div class="flex-container m-5">
+  <div class="row">
+    {{#each this.categories as |category|}}
+      <div class="col-md-4 category">
+        <h3 class="text-center">{{category}}</h3>
+        {{#each this.model as |todo|}}
+        {{#if (eq todo.status category)}}
+          <TodoCard
+            @id={{todo.id}}
+            @title={{todo.title}}
+            @description={{todo.description}}
+            @status={{todo.status}}
+            @delete={{this.deleteTodo}}
+            @update={{this.updateTodo}} />
+        {{/if}}
+        {{/each}}
       </div>
-      <p>id: {{todo.id}}</p>
-      <p>{{todo.description}}</p>
-      <button type="button" {{on "click" (fn this.deleteTodo todo.id)}}>Delete</button>
-    </div>
-  {{/each}}
-
+    {{/each}}
+  </div>
   <br>
   <LinkTo @route="form">Add Todo</LinkTo> 
 </div>

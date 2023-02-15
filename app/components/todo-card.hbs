@@ -1,0 +1,11 @@
+<div class="card my-3">
+  <div class="card-title">
+      <b>{{@title}}</b> ({{@status}})
+      <i role="button" class="fa-solid fa-x float-end" {{on "click" (fn @delete @id)}}></i>
+  </div>
+  <p>id: {{@id}}</p>
+  <p>{{@description}}</p>
+  <button type="button" class="btn btn-success" {{on "click" (fn @update @id @status)}}>
+    Update Status
+  </button>
+</div>

@@ -2,10 +2,6 @@ body {
     background-color: #f7f7f7;
 }
 
-.container {
-    margin: 1rem;
-}
-
 form {
     width: 30%;
 }
@@ -20,5 +16,12 @@ input {
     background-color: white;
     border-radius: 0.25em;
     padding: 1rem;
+    button {
+        width: 30%;
+    }
+}
 
+.fa-x {
+    color: red;
+    font-size: 1.25rem;
 }

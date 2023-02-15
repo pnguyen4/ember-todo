@@ -19,7 +19,7 @@ export default class FormController extends Controller {
         status: 'Incomplete',
       };
       let todo = this.store.createRecord('todo', data); // updates client state as side effect
-      await todo.save(); // send POST request to server, body contains a todo property with title, description, status 
+      await todo.save(); // send POST request to server, body contains a todo property with title, description, status
     }
   }
 }
